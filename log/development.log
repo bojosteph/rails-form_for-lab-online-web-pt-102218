@@ -272,3 +272,23 @@ Processing by SchoolClassesController#show as HTML
 Completed 200 OK in 14ms (Views: 9.3ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/school_classes/1/edit" for 173.93.185.85 at 2019-03-24 04:03:30 +0000
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb within layouts/application
+  Rendered school_classes/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 49ms (Views: 46.9ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/school_classes/1" for 173.93.185.85 at 2019-03-24 04:03:36 +0000
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CNmDFsuUZQXWtgYH3bviB+WpWK3fbba+UwOqnUXh+iEqfNt4MyGGJEPycEHdVgYYG0W2EgCxG4cjln2jl9S+OQ==", "school_class"=>{"title"=>"doctor who", "room_number"=>"21"}, "commit"=>"Update School class", "id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "school_classes" SET "title" = ?, "updated_at" = ? WHERE "school_classes"."id" = ?[0m  [["title", "doctor who"], ["updated_at", "2019-03-24 04:03:36.673452"], ["id", 1]]
+  [1m[35m (78.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://159.89.225.105:55982/school_classes/1
+Completed 302 Found in 83ms (ActiveRecord: 79.3ms)
+
+
