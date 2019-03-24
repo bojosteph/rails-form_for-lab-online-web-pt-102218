@@ -190,3 +190,22 @@ Processing by StudentsController#new as HTML
 Completed 200 OK in 541ms (Views: 525.2ms | ActiveRecord: 0.6ms)
 
 
+Started POST "/students" for 173.93.185.85 at 2019-03-24 03:48:42 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"frXnuN16PFvdw5qhb08gZ5vJPDg4bHpKJN2VIaEpAYFcEL/WJc/fekiH7OdvosR4ZSXSh+ew13NUSEIfcxxFmQ==", "student"=>{"first_name"=>"rob", "last_name"=>"roy"}, "commit"=>"Create Student"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "rob"], ["last_name", "roy"], ["created_at", "2019-03-24 03:48:42.657430"], ["updated_at", "2019-03-24 03:48:42.657430"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://159.89.225.105:55982/students/3
+Completed 302 Found in 5ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/students/3" for 173.93.185.85 at 2019-03-24 03:48:42 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 0.2ms)
+
+
