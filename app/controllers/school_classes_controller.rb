@@ -5,16 +5,20 @@ class SchoolClassesController < ApplicationController
   end 
   
   def create 
-    @school_class = SchoolClass.new(school_class_params(:))
+    @school_class = SchoolClass.new(school_class_params(:title, :room_number))
+    
   end 
   
   def show 
+    @school_class = SchoolClass.find(params[:id])
   end 
   
-  def edit 
+  def edit
+    @school_class = SchoolClass.find(params[:id])
   end 
   
-  def update 
+  def update
+    
   end 
   
   
